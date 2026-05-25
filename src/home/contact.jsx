@@ -247,7 +247,7 @@ const Contact = ({ theme, setActiveNav }) => {
               ? "text-(--color-cosmos)"
               : "text-(--color-pastelOrange)"
           } max-sm:hidden`}>
-          © 2026 Vitaliy Sopin. All rights reserved.
+          © Copyright by Pouya halavat .
         </p>
         <div className="w-[60%] flex sm:ml-auto h-full items-center justify-center max-sm:w-full">
           <div className="ml-20 transition-all max-sm:ml-0">

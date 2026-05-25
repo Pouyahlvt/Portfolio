@@ -3,10 +3,16 @@ import useWindowsize from "../hooks/windowSizeHook";
 import AnimatedShowEl from "./components/animateEl";
 import { SiGithub, SiReact, SiTailwindcss, SiJavascript } from "react-icons/si";
 import ImageOne from "/images.jpg";
+import ImageCoffeeShop from "/Coffee-shop.png"
+import ImageInvoice from "/invoice-generator.png"
+import ImageTodo from "/todo-list.png"
+import ImageMapty from "/Mapty.png"
+import Imagebankist from "/bankist.png"
+import ImageMiniGames from "/mini-game.png"
 
 const Projects = ({ theme, setActiveNav = () => {} }) => {
   const curDivRef = useRef(null);
-  const [activeProject, setActiveProject] = useState(4);
+  const [activeProject, setActiveProject] = useState(0);
   const [activingPro, setActivingPro] = useState({
     clicked: null,
     active: false,
@@ -40,7 +46,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
         { lang: <SiTailwindcss />, name: "Tailwind" },
       ],
       text: "the online-shop website for sells coffee and more...",
-      img: ImageOne,
+      img: ImageCoffeeShop,
     },
     {
       title: "Invoice maker",
@@ -50,7 +56,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
         { lang: <SiTailwindcss />, name: "Tailwind" },
       ],
       text: "the site for makeing profesinal invoice with different themplate .",
-      img: ImageOne,
+      img: ImageInvoice,
     },
     {
       title: "food-recepies",
@@ -70,29 +76,29 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
         { lang: <SiTailwindcss />, name: "Tailwind" },
       ],
       text: "simple to-do list my first react project.",
-      img: ImageOne,
+      img: ImageTodo,
     },
     {
-      title: "Runing on map",
+      title: "Mapty",
 
       gitHubLinkIcon: <SiGithub />,
       langs: [{ lang: <SiJavascript />, name: "JavaScript" }],
       text: " a website white real map use Api and new library , made in jonas course",
-      img: ImageOne,
+      img: ImageMapty,
     },
     {
-      title: "bank acount",
+      title: "bankist",
       gitHubLinkIcon: <SiGithub />,
       langs: [{ lang: <SiJavascript />, name: "JavaScript" }],
       text: "i dont what is this even i just learn working with array in that , made in jonas course",
-      img: ImageOne,
+      img: Imagebankist,
     },
     {
       title: "mini-games",
       gitHubLinkIcon: <SiGithub />,
       langs: [{ lang: <SiJavascript />, name: "JavaScript" }],
       text: "my first project when i love games and start learning css ",
-      img: ImageOne,
+      img: ImageMiniGames,
     },
     {
       title: "hesabdari",
@@ -187,7 +193,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
               }`}>
               <div className="w-full h-[33%] rounded-md overflow-hidden">
                 <img
-                  src={ImageOne}
+                  src={project.img}
                   alt="image"
                   className="w-full h-full object-cover transition-all duration-5000 ease-in delay-300 hover:scale-125"
                 />
