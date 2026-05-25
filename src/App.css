@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "@fontsource/nunito";
+@import "@fontsource/poppins";
+@import "@fontsource/ubuntu";
+@import "@fontsource/source-sans-pro";
+@import "@fontsource/lato";
+@import "@fontsource/raleway";
+@import "@fontsource/oswald";
+
+:root {
+  --color-orange: #ffa500;
+  --color-pumpkin: #ff7618;
+  --color-pastelOrange: #ffc067;
+  --color-redorange: #ff4d00;
+  --color-rosewood: #6a040f;
+  --color-crismonred: #9d0208;
+  --color-dark-azur: #490707;
+  --color-sharabi: #740125;
+  --color-cosmos: #551f2f;
+  --color-white-smoke: #f5f5f5;
+  --color-test:$;
+}
+
+@keyframes bubble {
+  0% {
+    scale: 100%;
+    transform: translateY(0);
+  }
+  50%{
+    scale: 105%;
+    transform: translateY(-10px);
+  }
+  100%{
+    scale: 100%;
+    transform: translateY(0);
+  }
+}
+
+.animate-bubble {
+  animation: bubble 2s ease-in-out infinite;
+}
+
+body,
+html {
+  cursor: none !important;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+[role="button"],
+[role="link"],
+.interactive {
+  cursor: none !important;
+}
+
+@media (max-width: 769px) {
+  body,
+  html,
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  [role="link"],
+  .interactive {
+    cursor: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-crismonred);
+  border-radius: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-rosewood);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sharabi);
+}
+
+::selection {
+  background-color: var(--color-sharabi);
+  color: var(--color-redorange);
+}
+
+.font-oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.font-ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+.font-sans-pro {
+  font-family: "sans-pro", sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
