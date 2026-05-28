@@ -1,5 +1,6 @@
 import WriterAnimatrion from "./components/writerAnimation";
 import { useRef, useEffect } from "react";
+import Imageman from "/man.png";
 
 const Interduce = ({ theme, setActiveNav }) => {
   const firstText = "Builds dynamics web application with React ^_^ ";
@@ -65,9 +66,40 @@ const Interduce = ({ theme, setActiveNav }) => {
             blinkClass={`w-1 h-7 -mb-2 ${theme === "light" ? "bg-(--color-cosmos)" : "bg-(--color-redorange)"}`}
           />
         }
+        <div className="flex mt-10 sm:w-fit max-sm:justify-center">
+          <div
+            className={`flex justify-center items-center py-2 px-6 border-2 rounded-xl transition-all duration-200 ease-in-out 
+              ${
+              theme === "light" 
+              ? "bg-linear-to-br from-(--color-cosmos) to-(--color-crismonred) text-(--color-pastelOrange)" 
+              : "bg-linear-to-br from-(--color-redorange) to-(--color-pastelOrange) text-(--color-cosmos)"
+            }`}>
+            <p className={`text-center text-xl font-poppins max-sm:text-[17px]`}>
+              <span className="font-bold ">+2</span> years <br />
+              learning
+            </p>
+          </div>
+          <div
+            className={`flex justify-center items-center py-2 px-6 border-2 rounded-xl transition-all duration-200 ease-in-out ml-6
+              ${
+              theme === "light" ? "bg-linear-to-br from-(--color-cosmos) to-(--color-crismonred) text-(--color-pastelOrange)" 
+              : "bg-linear-to-br from-(--color-redorange) to-(--color-pastelOrange) text-(--color-cosmos)"
+            }`}>
+            <p className={`text-center text-xl font-poppins max-sm:text-[17px]`}>
+              <span className="font-bold ">+7</span> Frontend <br />
+              project
+            </p>
+          </div>
+        </div>
       </div>
       <div className={`w-[50%] p-5 flex items-center`}>
-        <div className="w-[90%] overflow-hidden opacity-15 "></div>
+        <div className="w-[90%] overflow-hidden opacity-100 max-sm:hidden">
+          <img
+            src={Imageman}
+            alt="developer :/"
+            className="w-[60%] h-[60%] object-cover mx-auto my-auto"
+          />
+        </div>
       </div>
     </div>
   );

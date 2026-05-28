@@ -17,6 +17,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
     clicked: null,
     active: false,
   });
+  
   const {width} = useWindowsize()
 
   useEffect(() => {
