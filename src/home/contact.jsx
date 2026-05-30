@@ -48,10 +48,8 @@ const Contact = ({ theme, setActiveNav }) => {
     ) {
       setActiveInput("email");
     } else if (sendMassage.text.length < 1) {
-      
       setActiveInput("text");
     } else {
-      
       setActiveInput(null);
       setSendMassage({
         name: "",
@@ -87,14 +85,18 @@ const Contact = ({ theme, setActiveNav }) => {
         </h1>
       </AnimatedShowEl>
       <AnimatedShowEl>
-        <p className={`text-center text-2xl mt-5 font-ubuntu opacity-60 ${
+        <p
+          className={`text-center text-2xl mt-5 font-ubuntu opacity-60 ${
             theme === "light"
               ? "text-(--color-sharabi)"
               : "text-(--color-orange)"
-          } max-md:text-xl max-sm:text-[15px]`}>Enter your email, write your massage and send to me ^_^</p>
+          } max-md:text-xl max-sm:text-[15px]`}>
+          Enter your email, write your massage and send to me ^_^
+        </p>
       </AnimatedShowEl>
 
-      <div className="w-[75%] h-auto pb-10 flex mx-auto overflow-hidden backdrop-blur-lg mt-20 sm:border-4
+      <div
+        className="w-[75%] h-auto pb-10 flex mx-auto overflow-hidden backdrop-blur-lg mt-20 sm:border-4
        sm:bg-[#f5f5f53b] rounded-4xl border-(--color-white-smoke) max-md:w-[90%] max-sm:w-full max-sm:mt-10">
         <form className="w-full h-auto" action="">
           <div className="sm:flex w-[80%] mx-auto max-sm:w-[90%]">
@@ -251,13 +253,15 @@ const Contact = ({ theme, setActiveNav }) => {
         </p>
         <div className="w-[60%] flex sm:ml-auto h-full items-center justify-center max-sm:w-full">
           <div className="ml-20 transition-all max-sm:ml-0">
-            {
+            <a href="https://github.com/Pouyahlvt" target="blank">
+              {
               <GithubIcon
                 size={30}
                 strokeWidth={1.5}
                 stroke={`${theme === "light" ? "var(--color-cosmos)" : "var(--color-pastelOrange)"}`}
               />
             }
+            </a>
           </div>
           <div className="ml-5 transition-all ">
             {
@@ -269,12 +273,14 @@ const Contact = ({ theme, setActiveNav }) => {
             }
           </div>
           <div className="ml-3 transition-all ">
-            {
-              <Linkedin
-                width={30}
-                stroke={`${theme === "light" ? "var(--color-cosmos)" : "var(--color-pastelOrange)"}`}
-              />
-            }
+            <a href="https://www.linkedin.com/in/pouya-halavat-phlvt" target="blank">
+              {
+                <Linkedin
+                  width={30}
+                  stroke={`${theme === "light" ? "var(--color-cosmos)" : "var(--color-pastelOrange)"}`}
+                />
+              }
+            </a>
           </div>
         </div>
       </div>

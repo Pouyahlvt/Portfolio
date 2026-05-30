@@ -48,6 +48,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       ],
       text: "the online-shop website for sells coffee and more...",
       img: ImageCoffeeShop,
+      githubLink: "https://github.com/Pouyahlvt/coffee-online-shop.git"
     },
     {
       title: "Invoice maker",
@@ -58,6 +59,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       ],
       text: "the site for makeing profesinal invoice with different themplate .",
       img: ImageInvoice,
+      githubLink:"https://github.com/Pouyahlvt/Invoice-generator.git"
     },
     {
       title: "food-recepies",
@@ -68,6 +70,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       ],
       text: "a website for find your food recepi with 2000 recepi with API. make in jonas course.",
       img: ImageOne,
+      githubLink:""
     },
     {
       title: "to-do list",
@@ -78,6 +81,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       ],
       text: "simple to-do list my first react project.",
       img: ImageTodo,
+      githubLink:"https://github.com/Pouyahlvt/ToDo-list.git"
     },
     {
       title: "Mapty",
@@ -86,6 +90,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       langs: [{ lang: <SiJavascript />, name: "JavaScript" }],
       text: " a website white real map use Api and new library , made in jonas course",
       img: ImageMapty,
+      githubLink:""
     },
     {
       title: "bankist",
@@ -93,6 +98,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       langs: [{ lang: <SiJavascript />, name: "JavaScript" }],
       text: "i dont what is this even i just learn working with array in that , made in jonas course",
       img: Imagebankist,
+      githubLink:""
     },
     {
       title: "mini-games",
@@ -100,6 +106,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       langs: [{ lang: <SiJavascript />, name: "JavaScript" }],
       text: "my first project when i love games and start learning css ",
       img: ImageMiniGames,
+      githubLink:""
     },
     {
       title: "hesabdari",
@@ -107,6 +114,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       langs: [],
       text: "I will make this with next js and learn that .",
       img: ImageOne,
+      githubLink:""
     },
   ];
 
@@ -208,8 +216,9 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
                     {project.title}
                   </p>
                 )}
-                {project.gitHubLinkIcon && (
-                  <div
+                {project.githubLink.length > 5 && (
+                  <a href={project.githubLink} target="blank" className="ml-auto">
+                    <div
                     className={`flex ml-auto mr-2 justify-center items-center transition-all duration-300 ease-in 
                     ${activeProject === i ? "text-xl m-2 px-2 border-2 rounded-md hover:bg-amber-50 hover:shadow-2xl shadow-amber-50" : "text-xs scale-75"} `}>
                     {project.gitHubLinkIcon}
@@ -218,6 +227,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
                       GitHub
                     </span>
                   </div>
+                  </a>
                 )}
               </div>
               <div
