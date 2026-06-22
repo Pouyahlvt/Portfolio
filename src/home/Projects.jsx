@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import useWindowsize from "../hooks/windowSizeHook";
 import AnimatedShowEl from "./components/animateEl";
-import { SiGithub, SiReact, SiTailwindcss, SiJavascript } from "react-icons/si";
+import { SiGithub, SiReact, SiTailwindcss, SiJavascript, SiTypescript } from "react-icons/si";
 import ImageOne from "/images.jpg";
 import ImageCoffeeShop from "/Coffee-shop.png"
 import ImageInvoice from "/invoice-generator.png"
@@ -109,12 +109,12 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
       githubLink:""
     },
     {
-      title: "hesabdari",
+      title: "Accounting",
       gitHubLinkIcon: <SiGithub />,
-      langs: [],
+      langs: [{ lang: <SiTypescript/>, name: "TypeScript"}, {lang: <SiTailwindcss/>, name: "tailwind"}],
       text: "I will make this with next js and learn that .",
       img: ImageOne,
-      githubLink:""
+      githubLink:"https://github.com/Pouyahlvt/Precision-Accounting.git"
     },
   ];
 
@@ -216,7 +216,7 @@ const Projects = ({ theme, setActiveNav = () => {} }) => {
                     {project.title}
                   </p>
                 )}
-                {project.githubLink.length > 5 && (
+                {(project.githubLink.length > 5 && activeProject === i) && (
                   <a href={project.githubLink} target="blank" className="ml-auto">
                     <div
                     className={`flex ml-auto mr-2 justify-center items-center transition-all duration-300 ease-in 
